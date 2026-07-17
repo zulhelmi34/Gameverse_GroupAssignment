@@ -1,0 +1,927 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#111;
+    color:white;
+}
+
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:220px;
+    height:100%;
+    background:#000;
+}
+
+.sidebar h2{
+    text-align:center;
+    color:red;
+    padding:30px 0;
+    border-bottom:1px solid #333;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:20px 30px;
+    border-left:5px solid transparent;
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+    background:#222;
+    color:red;
+    border-left:5px solid red;
+}
+
+.sidebar .active{
+    background:#222;
+    color:red;
+    border-left:5px solid red;
+}
+
+
+.main{
+    margin-left:220px;
+}
+
+
+.slider{
+    width:100%;
+    height:550px;
+    overflow:hidden;
+    position:relative;
+}
+
+.slider input{
+    display:none;
+}
+
+.slides{
+    width:300%;
+    display:flex;
+    transition:1s;
+}
+
+.slide{
+    width:33.333%;
+    position:relative;
+}
+
+.slide img{
+    width:100%;
+    height:550px;
+    object-fit:cover;
+}
+
+
+.text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+}
+
+.text h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.text p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.text button{
+    background:red;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.text button:hover{
+    background:white;
+    color:black;
+}
+
+/* RADIO */
+
+#slide1:checked ~ .slides{
+    margin-left:0;
+}
+
+#slide2:checked ~ .slides{
+    margin-left:-100%;
+}
+
+#slide3:checked ~ .slides{
+    margin-left:-200%;
+}
+
+/* DOT */
+
+.navigation{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    text-align:center;
+}
+
+.navigation label{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background:white;
+    margin:5px;
+    cursor:pointer;
+}
+
+.navigation label:hover{
+    background:red;
+}
+
+
+.featured{
+    padding:60px;
+}
+
+.featured h2{
+    text-align:center;
+    color:red;
+    margin-bottom:40px;
+    font-size:35px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.card{
+    width:250px;
+    background:#222;
+    border-radius:10px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    text-align:center;
+    padding:15px;
+}
+
+.card p{
+    text-align:center;
+    padding-bottom:20px;
+    color:red;
+}
+
+
+footer{
+    background:#000;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+
+.about{
+
+    padding:50px;
+
+}
+
+.about h1{
+
+    color:red;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.about h2{
+
+    color:red;
+
+    margin-top:20px;
+
+}
+
+.about img{
+
+    width:100%;
+
+    max-width:700px;
+
+    display:block;
+
+    margin:20px auto;
+
+    border-radius:10px;
+
+}
+
+.about p{
+
+    line-height:30px;
+
+    text-align:justify;
+
+}
+
+.about ul{
+
+    margin-left:30px;
+
+    line-height:35px;
+
+}
+
+.about table{
+
+    width:100%;
+
+    margin-top:20px;
+
+    border-collapse:collapse;
+
+}
+
+.about th{
+
+    background:red;
+
+    color:white;
+
+    padding:15px;
+
+}
+
+.about td{
+
+    padding:15px;
+
+    background:#222;
+
+}
+
+
+
+.products{
+
+    padding:50px;
+
+}
+
+.products h1{
+
+    text-align:center;
+
+    color:red;
+
+    margin-bottom:40px;
+
+}
+
+.cards{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.card{
+
+    width:250px;
+
+    background:#1b1b1b;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    transition:0.3s;
+
+    box-shadow:0 0 10px rgba(255,0,0,0.2);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.card h3{
+
+    margin-top:15px;
+
+    color:red;
+
+}
+
+.card p{
+
+    padding:10px;
+
+}
+
+.card h4{
+
+    color:#ffffff;
+
+    margin-bottom:15px;
+
+}
+
+.card button{
+
+    margin-bottom:20px;
+
+}
+
+
+.services{
+
+    padding:50px;
+
+}
+
+.services h1{
+
+    text-align:center;
+
+    color:red;
+
+    margin-bottom:20px;
+
+}
+
+.service-text{
+
+    text-align:center;
+
+    width:80%;
+
+    margin:auto;
+
+    line-height:30px;
+
+    margin-bottom:40px;
+
+}
+
+.services .card{
+
+    background:#1b1b1b;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+}
+
+.services .card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 15px rgba(255,0,0,.5);
+
+}
+
+.services .card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.services .card h3{
+
+    color:red;
+
+    padding:15px;
+
+    text-align:center;
+
+}
+
+.services .card p{
+
+    padding:0 15px 20px;
+
+    text-align:center;
+
+    line-height:25px;
+
+}
+
+
+.promotion{
+
+    padding:50px;
+
+}
+
+.promotion h1{
+
+    text-align:center;
+
+    color:red;
+
+    margin-bottom:20px;
+
+}
+
+.promo-text{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    line-height:30px;
+
+}
+
+.promo-banner{
+
+    background:#b30000;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px;
+
+    border-radius:10px;
+
+    margin-bottom:50px;
+
+}
+
+.promo-banner h2{
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+.promo-banner h3{
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+.member{
+
+    background:#1b1b1b;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    margin-top:50px;
+
+}
+
+.member h2{
+
+    color:red;
+
+    margin-bottom:20px;
+
+}
+
+.member ul{
+
+    margin-left:25px;
+
+    line-height:35px;
+
+}
+
+
+
+.gallery{
+
+    padding:50px;
+
+}
+
+.gallery h1{
+
+    text-align:center;
+
+    color:red;
+
+    margin-bottom:20px;
+
+}
+
+.gallery-text{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    line-height:30px;
+
+}
+
+.gallery-container{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:30px;
+
+}
+
+.gallery-item{
+
+    width:320px;
+
+    background:#1b1b1b;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    transition:0.3s;
+
+    box-shadow:0 0 10px rgba(255,0,0,0.2);
+
+}
+
+.gallery-item:hover{
+
+    transform:scale(1.05);
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.gallery-item h3{
+
+    text-align:center;
+
+    color:red;
+
+    padding:15px;
+
+}
+
+
+
+
+.contact{
+
+    padding:50px;
+
+}
+
+.contact h1{
+
+    text-align:center;
+
+    color:red;
+
+    margin-bottom:20px;
+
+}
+
+.contact-text{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    line-height:30px;
+
+}
+
+.contact-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+.contact-info{
+
+    width:40%;
+
+    background:#1b1b1b;
+
+    padding:30px;
+
+    border-radius:10px;
+
+}
+
+.contact-info h2{
+
+    color:red;
+
+    margin-bottom:20px;
+
+}
+
+.contact-info p{
+
+    line-height:30px;
+
+}
+
+.contact-form{
+
+    width:55%;
+
+    background:#1b1b1b;
+
+    padding:30px;
+
+    border-radius:10px;
+
+}
+
+.contact-form label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:8px;
+
+}
+
+.contact-form input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    margin-bottom:10px;
+
+}
+
+.contact-form textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    margin-bottom:20px;
+
+}
+
+.contact-form button{
+
+    width:100%;
+
+}
+
+
+.social-media{
+
+    margin-top:60px;
+
+    text-align:center;
+
+}
+
+.social-media h2{
+
+    text-align:center;
+
+    color:red;
+
+    margin-bottom:30px;
+
+}
+
+.social-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    width:100%;
+
+    margin:0 auto;
+
+}
+
+.social-card{
+
+    width:220px;
+
+    background:#1b1b1b;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    border:1px solid #333;
+
+    transition:.3s;
+
+}
+
+.social-card:hover{
+
+    transform:translateY(-8px);
+
+    border:1px solid red;
+
+    box-shadow:0 0 15px rgba(255,0,0,0.5);
+
+}
+
+.social-card h3{
+
+    color:red;
+
+    margin-bottom:10px;
+
+}
+
+.social-card p{
+
+    color:white;
+
+    line-height:25px;
+
+}
+
+
+.more-products{
+
+    background:#1b1b1b;
+
+    margin-top:60px;
+
+    padding:40px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+}
+
+.more-products h2{
+
+    color:red;
+
+    margin-bottom:20px;
+
+}
+
+.more-products p{
+
+    line-height:30px;
+
+    margin-bottom:20px;
+
+}
+
+.product-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin:30px 0;
+
+}
+
+.product-list span{
+
+    background:#2b2b2b;
+
+    padding:12px 20px;
+
+    border-radius:20px;
+
+    border:1px solid red;
+
+}
+
+.visit{
+
+    font-size:18px;
+
+    margin-top:20px;
+
+}
+
+.hero-btn{
+
+    display:inline-block;
+
+    background:red;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 35px;
+
+    border-radius:5px;
+
+    transition:.3s;
+
+    margin-top:10px;
+
+}
+
+.hero-btn:hover{
+
+    background:white;
+
+    color:red;
+
+}
